@@ -31,13 +31,14 @@ struct AddCardView: View {
                         }
                         .contentShape(Rectangle())
                         .onTapGesture {
-                            selectedTemplateName = name
-                            viewModel.imageName = name.lowercased().replacingOccurrences(of: " ", with: "_") + ".jpg"
+                          selectedTemplateName = name
+                          viewModel.imageName = name.lowercased().replacingOccurrences(of: " ", with: "_") + ".jpg"
                         }
                     }
+                    
                 }
-
-                Section {
+                
+                Section() {
                     Button("Save") {
                         viewModel.saveCard()
                     }
